@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>향수선택</title>
+<script>
+function perfume(obj) {
+var perfume_a = ["옴므코롱", "쟈도르", "화렌화이트", "블루밍부케", "소바쥬", "포에버 앤 에버"];
+var perfume_b = ["길티블랙", "길티 블랙 뿌르옴므", "길티 뿌르옴므", "블룸"];
+var perfume_c = ["N5넘버 파이브", "코코 마드모아젤", "샹스 어 땅드르", "블루 드 샤넬"];
+var perfume_d = ["포비든 어페어", "안나수이 락미 시리즈", "돌리걸", "러브 유어 드림"];
+var perfume_e = ["랑방 에끌라 드 아르페쥬", "랑방 메리미", "랑방 잔느","랑방 루머2로즈"];
+var target = document.getElementById("perfumex");
+ if(obj.value == "a") var k = perfume_a;
+else if(obj.value == "b") var k = perfume_b;
+else if(obj.value == "c") var k = perfume_c;
+else if(obj.value == "d") var k = perfume_d;
+else if(obj.value == "e") var k = perfume_e;
+ 
+  target.options.length = 0;
+  for (x in k) {
+    var opt = document.createElement("option");
+    opt.value = k[x];
+    opt.innerHTML = k[x];
+    target.appendChild(opt);
+    }
+    }
+    </script>
+
+</head>
+<body>
+<section>
+<fieldset>
+<legend>향수</legend>
+<label for="perfumex">향수선택</label>
+<select id="perfumex" name="menperfume" onchange ="perfume(this)">
+<option value="a"selected>디올</option>
+<option value="b">구찌</option>
+<option value="c">샤넬</option>
+<option value="d">안나수이</option>
+<option value="e">랑방</option>
+</select>
+<label for="perfume">향수종류</label>
+<select id="perfumex" name="perfume"></select>
+<button type="submit">보내기</button>
+</fieldset>
+</section>
+</body>
+</html>
