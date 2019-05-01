@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>향수선택</title>
 <script>
+var chick;
+
 function perfume(obj) {
 var perfume_a = ["옴므코롱", "쟈도르", "화렌화이트", "블루밍부케", "소바쥬", "포에버 앤 에버"];
 var perfume_b = ["길티블랙", "길티 블랙 뿌르옴므", "길티 뿌르옴므", "블룸"];
@@ -12,12 +14,26 @@ var perfume_c = ["N5넘버 파이브", "코코 마드모아젤", "샹스 어 땅
 var perfume_d = ["포비든 어페어", "안나수이 락미 시리즈", "돌리걸", "러브 유어 드림"];
 var perfume_e = ["랑방 에끌라 드 아르페쥬", "랑방 메리미", "랑방 잔느","랑방 루머2로즈"];
 var target = document.getElementById("perfume");
- if(obj.value == "a") var k = perfume_a;
-else if(obj.value == "b") var k = perfume_b;
-else if(obj.value == "c") var k = perfume_c;
-else if(obj.value == "d") var k = perfume_d;
-else if(obj.value == "e") var k = perfume_e;
- 
+ if(obj.value == "a") {
+ var k =  perfume_a;
+ chick="디올";
+}
+else if(obj.value == "b") {
+var k = perfume_b;
+chick="구찌";
+}
+else if(obj.value == "c") {
+var k = perfume_c;
+chick="샤넬";
+}
+else if(obj.value == "d") {
+var k = perfume_d;
+chick="안나수이";
+}
+else if(obj.value == "e") {
+var k = perfume_e;
+chick="랑방";
+} 
   target.options.length = 0;
   for (x in k) {
     var opt = document.createElement("option");
@@ -25,6 +41,11 @@ else if(obj.value == "e") var k = perfume_e;
     opt.innerHTML = k[x];
     target.appendChild(opt);
     }
+     document.getElementById("getd").innerHTML= "향수를 선택해 주세요";
+    }
+    function gett(ftm){
+    
+      document.getElementById("getd").innerHTML= chick + "의 " + ftm.value + "을(를) 뿌리겠어.";
     }
     </script>
 
@@ -42,8 +63,10 @@ else if(obj.value == "e") var k = perfume_e;
 <option value="e">랑방</option>
 </select>
 <label for="perfume">향수종류</label>
-<select id="perfume" name="perfume"></select>
-<button type="submit">보내기</button>
+<select id="perfume" name="perfume" onchange="gett(this)"></select>
+</fieldset>
+<fieldset><legend>선택한 향수</legend>
+<p id="getd"></p>
 </fieldset>
 </section>
 </body>
