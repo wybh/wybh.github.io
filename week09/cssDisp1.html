@@ -1,0 +1,25 @@
+<!doctype html>	<!-- cssDisp1.html --> 
+ <html><head><meta charset="utf-8"/> 
+<meta name="viewport"content="width=device-width,initial-scale=1"/>
+<style>
+ .ordinary{border:1px solid black;}
+ .dispinline{display:inline; border:1px solid black;}
+ .dispblock{display:block; border:1px solid black;}
+ .dispinlineblock{display:inline-block; border:1px solid black; width:150px; height:50px;}
+</style>
+<title>CSS display/visibility실습</title></head><body><section>
+<h4>1.블록레벨엘리먼트p의inline적용</h4>
+<p class="ordinary">(블록엘리먼트p)동해물과백두산이마르고닳도록하느님이보우하사우리나라만세</p>
+<p class="ordinary">(블록엘리먼트p)무궁화삼천리화려강산대한사람대한으로길이보전하세</p>
+<p class="dispinline">(inline으로변경)동해물과백두산이마르고닳도록하느님이보우하사우리나라만세</p> 
+<p class="dispinline">(inline으로변경) 무궁화삼천리화려강산대한사람대한으로길이보전하세</p>
+<h4>2.일라인엘리먼트span의block적용</h4>
+<p>동해물과백두산이<span>(span)마르고</span>닳도록</p>
+<p>동해물과백두산이<span class="dispblock">(span을block으로변경)마르고</span>닳도록</p>
+<h4>3.인라인엘리먼트span의inline-block적용</h4>
+<p>동해물과백두산이<span>(span)마르고</span>닳도록</p>
+<p>동해물과백두산이<span class="dispinlineblock">(span을block으로변경)마르고</span>닳도록</p>
+<h4>4.블록레벨엘리먼트는li의inline적용</h4>
+<ul><li>로그인</li><li>회원가입</li><li>사이트맵</li></ul>
+<ul><li class="dispinline">로그인|</li><li class="dispinline">회원가입|</li><li class="dispinline">사이트맵</li></ul>
+</section></body></html>
