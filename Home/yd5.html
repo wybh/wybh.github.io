@@ -1,0 +1,36 @@
+<!doctype html>	<!-- yd5.html --> 
+ <html><head><meta charset="utf-8"/> 
+<meta name="viewport"content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="rwd4.css"/>
+<style>
+*{ box-sizing:border-box; padding:0; margin:0; }
+.row::after { content:""; clear:both; display: table; }
+[class*="col-"]{ float:left; padding:10px;}
+.header, .footer{background-color:#818181; color:black; padding:10px;}
+.menu ul, .banner ul{list-style-type:none;}
+.menu li{background-color:#CACACA; color:white; padding:10px; margin-bottom:10px; box-shadow:0.1px 3px gray; }
+.menu li:hover{background-color:#EDEDED;}
+.banner li {border:2px solid black; padding:10px; margin-bottom:10px; box-shadow:0.1px 3px gray;}
+.banner li img{width:30%; vertical-align:middle;}
+/* for mobile*/
+[class*="col-"]{width:100%;}
+@media only screen and (min-width: 600px){ .col-m-3{width:25%;} .col-m-9{width:75%;} .col-m-12{width:100%;} }
+@media only screen and (min-width: 768px){.col-3{width:25%;} .col-6{width:50%;}}
+</style>
+<title>RWD실습</title></head>
+<body><header class="header"><h2>20XX 정예담 Portfolio</h2></header>
+<div class="row"></div>
+<div id="main">
+<nav class="col-3 col-m-3 menu">
+<ul><li><a href="yd1.html">학력</a></li><li><a href="yd2.html">경력</a></li><li><a href="week03/MyClass.html">수업수강내역</a></li><li><a href="yd4.html">과목별프로젝트</a></li><li><a href="yd5.html">공모전</a></li><li><a href="yd6.html">동아리</a></li><li><a href="yd7.html">봉사활동</a></li><li><a href="yd8.html">기타</a></li></ul></nav>
+<section class="col-6 col-m-9">
+<picture>
+<source media="(min-width:768px)"srcset="contest.jpg">
+<source media="(min-width:600px)"srcset="contest.jpg">
+<img src="contest.jpg" alt="" style="width:auto;">
+</picture>
+<ul><li><p>과학기술 혜택으로부터 소외된 국내외 사람들을 위한 적정기술 제품을 만들어 해결</p></li></ul>
+</section>
+</div><div class="row"></div>
+<footer class="footer"><h4>Copyright20XX Korea.</h4></footer>
+</body></html>
