@@ -1,13 +1,13 @@
-<!DOCTYPEhtml> <!-- getElementByName.html-->
+<!DOCTYPEhtml> <!-- getElementsByName.html-->
 <html><head><meta charset="urf-8"/>
 <meta name="viewport"content="width=device-width,initial-scale=1"/> 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="sample.css"/><script src="sample.js"></script>
 <script>
-funcion fnGetElementByName(){
-var accessTag=document.getElementByName("input_id")[0];
+funcion fnGetElementsByName(){
+var accessTag=document.getElementsByName("input_id")[0];
 console.log(accessTag.tagName);
-accessTag.setAttribute("value","getElementByName실행!");
+accessTag.setAttribute("value","getElementsByName실행!");
 }
 </script><title>웹 프로그래밍실습</title>
 </head>
@@ -21,6 +21,6 @@ accessTag.setAttribute("value","getElementByName실행!");
  <input id="button_id1" type="button" name="user_id" value="입력"/><br/>
  빈칸에 검색어를 넣고 입력해주세요.
  </form>
-<form><input type="button" onclick="fnGetElementByName();" value="변경실행"\></form>
+<form><input type="button" onclick="fnGetElementsByName();" value="변경실행"\></form>
 </section>
 </body></html>
